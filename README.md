@@ -1,1 +1,3 @@
-# SQPM-Lab-2_75766---100872058
+# Lab 2: Implementing and Testing Web Application and API Service using Apache Maven and Spring Boot
+
+Laiba - 100872058
