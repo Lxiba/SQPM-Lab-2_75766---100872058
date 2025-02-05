@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Showing the Results</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <!-- for styling -->
+    <style>
+        table {
+            border: 1px solid black;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        input[type="button"], input[type="submit"] {
+            width: 100%;
+            padding: 20px 40px;
+            background-color: green;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        input[type="text"], select {
+            padding: 20px 30px;
+            font-size: 24px;
+            font-weight: bold;
+            border: 2px solid black;
+            border-radius: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+<h3>
+    <form action="/" method="post">
+        <table id="calcu">
+            <tr>
+                <td colspan="2">
+                    <input type="text" th:value="|${operand1} ${operator} ${operand2} = ${result}|" readonly />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <form action="/" method="get">
+                        <input type="submit" value="New Calculation" />
+                    </form>
+                </td>
+                <td>
+                    <form action="/" method="get">
+                        <input type="hidden" name="operand1" th:value="${result}" />
+                        <input type="submit" value="Continue Calculation" />
+                    </form>
+                </td>
+            </tr>
+        </table>
+    </form>
+</h3>
+</body>
+</html>
